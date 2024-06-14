@@ -1,6 +1,6 @@
 :root {
-  --main-color: #474A48;
-  --main-dark-color: #2C302E;
+  --main-color: #e5e4eb;
+  --main-dark-color: #2c302e;
   --secondary-color: #4392F1;
   --cta-color: #DC493A;
   --accent-color: #E7F0FF;
@@ -11,6 +11,13 @@
 
 html, body {
   margin: 0;
+  overflow: hidden;
+  font-family: "Noto Sans", sans-serif;
+}
+hr {
+  width: 100%;
+  border-bottom-width: 2px !important;
+  border-color: var(--main-dark-color) !important;
 }
 header {
   width: 100vw;
@@ -44,4 +51,35 @@ header ul li {
   background-color: var(--main-color);
   width: 100vw;
   height: 100vh;
+  padding: 0;
+  padding-top: 80px;
+  box-sizing: border-box;
 } 
+#portfolio-pic {
+  max-width: 30%;
+  
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 0 0 0 20%;
+}
+#about-text {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 60%;
+  padding: 0 0 3em 10em;
+  box-sizing: border-box;
+  text-align: left;
+}
+#about-text p{
+  margin: 1em 0;
+  font-size: 1.3em;
+  color: var(--main-dark-color);
+}
+#about-text h2 {
+  margin-bottom: .2em;
+  font-family: "Bebas Neue", sans-serif;
+}
