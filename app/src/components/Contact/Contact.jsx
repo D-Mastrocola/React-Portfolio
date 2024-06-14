@@ -1,4 +1,8 @@
 let Contact = () => {
-    <main className="main-content"></main>
-}
+  return (
+    <main className="main-content">
+      <h1>Contact</h1>
+    </main>
+  );
+};
 export default Contact;
