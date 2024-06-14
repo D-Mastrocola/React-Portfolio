@@ -19,10 +19,10 @@ let About = () => {
           minded people.
         </Typography>
         <Stack direction="row" spacing={2}>
-          <Button variant="contained" color="warning" startIcon={<ChevronRightIcon/>}>
+          <Button href='./portfolio' variant="contained" color="warning" startIcon={<ChevronRightIcon/>}>
             View Work
           </Button>
-          <Button variant="text" startIcon={<AttachFileIcon />}>
+          <Button href="https://docs.google.com/document/d/1N5bozh_b9TkdDWw3qjZfWmAaUyDPKeXE/edit?usp=sharing&ouid=117280491140216913901&rtpof=true&sd=true" variant="text" startIcon={<AttachFileIcon />}>
             Resume
           </Button>
         </Stack>
