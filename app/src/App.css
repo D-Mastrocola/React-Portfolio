@@ -83,3 +83,12 @@ header ul li {
   margin-bottom: .2em;
   font-family: "Bebas Neue", sans-serif;
 }
+#portfolio {
+  display: flex;
+  padding-top: 10em;
+  box-sizing: border-box;
+}
+
+.project-image {
+  height: 100%;
+}
