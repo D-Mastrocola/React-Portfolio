@@ -12,7 +12,7 @@ let Portfolio = () => {
   return (
     <main className="main-content" id='portfolio'>
       <img className='project-image' src='./assets/images/budgetBuddy.png'/>
-      <List component="nav">
+      <List sx={{ width: '40%'}}>
         <ListItem
           selected={selectedIndex === 0}
           onClick={(event) => handleListItemClick(event, 0)}
