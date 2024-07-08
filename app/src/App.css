@@ -11,8 +11,8 @@
 
 html, body {
   margin: 0;
-  overflow: hidden;
   font-family: "Noto Sans", sans-serif;
+  overflow-x: hidden;
 }
 hr {
   width: 100%;
@@ -50,7 +50,7 @@ header ul li {
 .main-content {
   background-color: var(--main-color);
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   padding: 0;
   padding-top: 80px;
   box-sizing: border-box;
@@ -86,9 +86,30 @@ header ul li {
 #portfolio {
   display: flex;
   padding-top: 10em;
+  flex-direction: column;
   box-sizing: border-box;
 }
-
-.project-image {
-  width: 60%;;
+.project-card {
+  height: 30vh;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8em;
+  box-sizing: border-box;
+}
+#first-project {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+}
+#first-project div {
+  text-align: center !important;
+}
+#first-project img {
+  height: 75vh;
+}
+.project-card img {
+  height: 100%;
 }
