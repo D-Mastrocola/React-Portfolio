@@ -95,8 +95,14 @@ header ul li {
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding: 0 8em;
+  padding: 1em 8em;
   box-sizing: border-box;
+}
+.project-right {
+  background-color: #b6b5bb;
+}
+.project-left {
+  text-align: left;
 }
 #first-project {
   flex-direction: column;
@@ -112,4 +118,9 @@ header ul li {
 }
 .project-card img {
   height: 100%;
+}
+.project-desc {
+  padding: .8em;
+  display: flex;
+  flex-direction: column;
 }

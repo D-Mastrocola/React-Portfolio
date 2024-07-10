@@ -26,6 +26,12 @@ let Portfolio = () => {
         desc="I made a Weather Dashboard that uses the OpenWeather API to get the weather for the requested location as well as the 5 day forcast. It uses HTML, CSS, Bootstrap, JavaScript, jQuery, and fetch."
         index={1}
       />
+      <ProjectCard
+        name="Pathfinder"
+        imagePath="pathfinder.png"
+        desc="A pathfinder visualizer based on the A* algorithm. Made using JavaScript. You can change the position of the start and end nodes by clicking and dragging. Place wall nodes by clicking on an empty node"
+        index={2}
+      />
     </main>
   );
 };
