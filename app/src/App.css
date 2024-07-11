@@ -20,9 +20,10 @@ hr {
   border-color: var(--main-dark-color) !important;
 }
 header {
+  z-index: 10;
   width: 100vw;
-  background-color: rgba(229, 228, 235, 0.8);;
-  height: 100px;
+  background-color: rgba(229, 228, 235, 1);;
+  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
