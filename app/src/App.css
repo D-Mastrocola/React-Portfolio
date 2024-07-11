@@ -124,3 +124,6 @@ header ul li {
   display: flex;
   flex-direction: column;
 }
+.project-btn {
+  margin: 0 .5em !important;
+}

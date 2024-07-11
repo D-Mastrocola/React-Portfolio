@@ -22,12 +22,24 @@ let ProjectCard = (props) => {
                 {props.desc}
               </Typography>
               <div>
-                <IconButton color="warning" href={props.live}>
-                  <ComputerIcon />
-                </IconButton>
-                <IconButton color="error" href={props.code}>
-                  <CodeIcon />
-                </IconButton>
+                <Button
+                  className="project-btn"
+                  variant="contained"
+                  color="warning"
+                  startIcon={<ComputerIcon />}
+                  href={props.live}
+                >
+                  Live
+                </Button>
+                <Button
+                  className="project-btn"
+                  variant="contained"
+                  color="primary"
+                  startIcon={<CodeIcon />}
+                  href={props.code}
+                >
+                  Code
+                </Button>
               </div>
             </div>
           </>
@@ -40,13 +52,25 @@ let ProjectCard = (props) => {
               <Typography variant="body2" component={"p"} m={1}>
                 {props.desc}
               </Typography>
-              <div m={1}>
-                <IconButton color="warning" href={props.live}>
-                  <ComputerIcon />
-                </IconButton>
-                <IconButton color="error" href={props.code}>
-                  <CodeIcon />
-                </IconButton>
+              <div class="project-btn" m={1}>
+                <Button
+                  className="project-btn"
+                  variant="contained"
+                  color="warning"
+                  startIcon={<ComputerIcon />}
+                  href={props.live}
+                >
+                  Live
+                </Button>
+                <Button
+                  className="project-btn"
+                  variant="contained"
+                  color="primary"
+                  startIcon={<CodeIcon />}
+                  href={props.code}
+                >
+                  Code
+                </Button>
               </div>
             </div>
             <img src={"./assets/images/" + props.imagePath} />
