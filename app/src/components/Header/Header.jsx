@@ -7,16 +7,16 @@ let Header = () => {
     <header>
       <img id="header-logo" src={pfp} alt="Logo" />
       <List>
-        <ListItemButton component="a" href="#about">
+        <ListItemButton component="a" href="./about">
           <ListItemText primary="About" />
         </ListItemButton>
-        <ListItemButton component="a" href="#portfolio">
+        <ListItemButton component="a" href="./portfolio">
           <ListItemText primary="Portfolio" />
         </ListItemButton>
-        <ListItemButton component="a" href="#contact">
+        <ListItemButton component="a" href="./contact">
           <ListItemText primary="Contact" />
         </ListItemButton>
-        <ListItemButton component="a" href="#resume">
+        <ListItemButton component="a" href="./resume">
           <ListItemText primary="Resume" />
         </ListItemButton>
       </List>
