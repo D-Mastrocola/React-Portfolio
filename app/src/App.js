@@ -1,5 +1,4 @@
 import "./App.css";
-import Header from "./components/Header/Header";
 import Landing from "./components/Landing/Landing";
 import About from "./components/About/About";
 import Portfolio from "./components/Portfolio/Portfolio";
@@ -19,7 +18,6 @@ function App() {
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
-        <Header />
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Landing />}></Route>
