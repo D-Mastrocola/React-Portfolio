@@ -23,15 +23,30 @@ let Header = () => {
     setOpen(newOpen);
   };
 
+  const fromTransition = () => {
+    let animeDiv = document.getElementById("animation-div");
+    animeDiv.style.zIndex = 100;
+    animeDiv.style.opacity = 1;
 
 
-  const fromTransition = () => {};
+    anime({
+      targets: animeDiv,
+      opacity: 0,
+      duration: 400,
+      easing: 'linear',
+      update: function (anim) {
+        let progress = Math.round(anim.progress);
+        if (progress === 100) {
+          animeDiv.style.zIndex = -100;
+        }
+      },
+    });
+  };
   const goTransition = (link) => {
     let location = window.location.pathname;
     if (link === location) {
       return false;
     }
-    console.log("animate");
     let animeDiv = document.getElementById("animation-div");
     animeDiv.style.opacity = 0;
     animeDiv.style.zIndex = 100;
@@ -52,7 +67,7 @@ let Header = () => {
   return (
     <>
       <div id="animation-div"></div>
-      <header>
+      <header onLoad={() => fromTransition()}>
         <img id="header-logo" src={pfp} alt="Logo" />
         <IconButton onClick={toggleDrawer(true)}>
           <AppsIcon
