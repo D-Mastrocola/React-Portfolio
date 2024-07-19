@@ -1,4 +1,4 @@
-import { Typography, Button, IconButton } from "@mui/material";
+import { Typography, Button} from "@mui/material";
 import CodeIcon from "@mui/icons-material/Code";
 import ComputerIcon from "@mui/icons-material/Computer";
 import Divider from "@mui/material/Divider";
@@ -7,11 +7,11 @@ let ProjectCard = (props) => {
     <>
       <div
         className={
-          props.index % 2 != 0 ? "project-card project-right" : "project-card"
+          props.index % 2 !== 0 ? "project-card project-right" : "project-card"
         }
-        id={props.index == 0 ? "first-project" : null}
+        id={props.index === 0 ? "first-project" : null}
       >
-        {props.index % 2 == 0 ? (
+        {props.index % 2 === 0 ? (
           <>
             <img src={"./assets/images/" + props.imagePath} />
             <div className="project-desc" style={{ textAlign: "left" }}>
