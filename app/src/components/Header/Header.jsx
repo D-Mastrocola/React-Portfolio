@@ -23,17 +23,35 @@ let Header = () => {
     setOpen(newOpen);
   };
 
+  const changeLocation = (link) => {
+    navigate(link);
+  };
+
   const fromTransition = () => {
     let animeDiv = document.getElementById("animation-div");
     animeDiv.style.zIndex = 100;
     animeDiv.style.opacity = 1;
-
-
+    anime({
+      targets: ".header-anim-img",
+      rotation: "1turn",
+      duration: 300,
+      update: function (anim) {
+        let progress = Math.round(anim.progress);
+        if (progress === 100) {
+          loadingAnim();
+        }
+      },
+    });
+  };
+  const loadingAnim = () => {
+    let animeDiv = document.getElementById("animation-div");
+    const imageSize = 3024;
+    const gridSize = imageSize / 3;
     anime({
       targets: animeDiv,
       opacity: 0,
-      duration: 400,
-      easing: 'linear',
+      duration: 600,
+      easing: "linear",
       update: function (anim) {
         let progress = Math.round(anim.progress);
         if (progress === 100) {
@@ -48,25 +66,62 @@ let Header = () => {
       return false;
     }
     let animeDiv = document.getElementById("animation-div");
-    animeDiv.style.opacity = 0;
-    animeDiv.style.zIndex = 100;
 
-    anime({
-      targets: animeDiv,
-      opacity: 1,
-      duration: 800,
-      update: function (anim) {
-        let progress = Math.round(anim.progress);
-        if (progress === 100) {
-          navigate(link);
-        }
-      },
-    });
+    let random = Math.floor(Math.random() * 2);
+    animeDiv.style.zIndex = 100;
+    if (random == 0) {
+      animeDiv.style.opacity = 0;
+
+      anime({
+        targets: animeDiv,
+        opacity: 1,
+        easing: "linear",
+        duration: 800,
+        update: function (anim) {
+          let progress = Math.round(anim.progress);
+          if (progress === 100) {
+            changeLocation(link);
+          }
+        },
+      });
+    } else if (random == 1) {
+      animeDiv.style.width = "100vw";
+      animeDiv.style.height = "0vh";
+      animeDiv.style.opacity = 1;
+      anime({
+        targets: animeDiv,
+        height: "100vh",
+        easing: "easeInOutElastic",
+        duration: 600,
+        update: function (anim) {
+          let progress = Math.round(anim.progress);
+          if (progress === 100) {
+            changeLocation(link);
+          }
+        },
+      });
+    }
   };
 
   return (
     <>
-      <div id="animation-div"></div>
+      <div id="animation-div">
+        <div>
+          <div className="header-anim-img" id="anim-img-tl"></div>
+          <div className="header-anim-img" id="anim-img-tm"></div>
+          <div className="header-anim-img" id="anim-img-tr"></div>
+        </div>
+        <div>
+          <div className="header-anim-img" id="anim-img-ml"></div>
+          <div className="header-anim-img" id="anim-img-mm"></div>
+          <div className="header-anim-img" id="anim-img-mr"></div>
+        </div>
+        <div>
+          <div className="header-anim-img" id="anim-img-bl"></div>
+          <div className="header-anim-img" id="anim-img-bm"></div>
+          <div className="header-anim-img" id="anim-img-br"></div>
+        </div>
+      </div>
       <header onLoad={() => fromTransition()}>
         <img id="header-logo" src={pfp} alt="Logo" />
         <IconButton onClick={toggleDrawer(true)}>

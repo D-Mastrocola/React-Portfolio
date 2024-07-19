@@ -1,20 +1,26 @@
 :root {
   --main-color: #e5e4eb;
   --main-dark-color: #2c302e;
-  --secondary-color: #4392F1;
-  --cta-color: #DC493A;
-  --accent-color: #E7F0FF;
+  --secondary-color: #4392f1;
+  --cta-color: #dc493a;
+  --accent-color: #e7f0ff;
+  --pfp-url: url(../public/assets/images/portfolioPicture.jpg);
 }
 .App {
   text-align: center;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   font-family: "Noto Sans", sans-serif;
   overflow-x: hidden;
 }
 #animation-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100vw;
   height: 100vh;
   box-sizing: border-box;
@@ -24,6 +30,47 @@ html, body {
   top: 0;
   left: 0;
 }
+#animation-div div {
+  display: flex;
+}
+.header-anim-img {
+  opacity: 1;
+  width: 80px;
+  height: 80px;
+  background-image: var(--pfp-url);
+  background-size: 240px;
+  margin: 2px;
+}
+#anim-img-tl {
+  background-position: left top;
+}
+#anim-img-tm {
+  background-position: center top;
+}
+#anim-img-tr {
+  background-position: right top;
+}
+#anim-img-ml {
+  background-position: left center;
+}
+#anim-img-mm {
+  background-position: center center;
+}
+#anim-img-mr {
+  background-position: right center;
+}
+#anim-img-bl {
+  background-position: left bottom;
+}
+#anim-img-bm {
+  background-position: center bottom;
+}
+#anim-img-br {
+  background-position: right bottom;
+}
+
+
+
 hr {
   width: 100%;
   border-bottom-width: 2px !important;
@@ -32,7 +79,7 @@ hr {
 header {
   z-index: 10;
   width: 100vw;
-  background-color: rgba(229, 228, 235, 1);;
+  background-color: rgba(229, 228, 235, 1);
   height: 80px;
   display: flex;
   justify-content: space-between;
@@ -46,7 +93,7 @@ header {
 #header-logo {
   height: 90%;
   border-radius: 50%;
-  padding: .5em 0;
+  padding: 0.5em 0;
   box-sizing: border-box;
 }
 header ul {
@@ -65,10 +112,10 @@ header ul li {
   padding: 0;
   padding-top: 80px;
   box-sizing: border-box;
-} 
+}
 #portfolio-pic {
   max-width: 30%;
-  
+
   position: absolute;
   top: 0;
   right: 0;
@@ -85,13 +132,13 @@ header ul li {
   box-sizing: border-box;
   text-align: left;
 }
-#about-text p{
+#about-text p {
   margin: 1em 0;
   font-size: 1.3em;
   color: var(--main-dark-color);
 }
 #about-text h2 {
-  margin-bottom: .2em;
+  margin-bottom: 0.2em;
   font-family: "Bebas Neue", sans-serif;
 }
 #portfolio {
@@ -131,12 +178,12 @@ header ul li {
   height: 100%;
 }
 .project-desc {
-  padding: .8em;
+  padding: 0.8em;
   display: flex;
   flex-direction: column;
 }
 .project-btn {
-  margin: 0 .5em !important;
+  margin: 0 0.5em !important;
 }
 
 #contact {
