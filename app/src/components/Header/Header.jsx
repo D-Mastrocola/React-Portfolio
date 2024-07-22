@@ -31,10 +31,14 @@ let Header = () => {
     let animeDiv = document.getElementById("animation-div");
     animeDiv.style.zIndex = 100;
     animeDiv.style.opacity = 1;
+    let imageElements = document.querySelectorAll(".header-anim-img");
     anime({
-      targets: ".header-anim-img",
-      rotation: "1turn",
-      duration: 300,
+      targets: imageElements,
+      rotate: '2turn',
+      easing: 'linear',
+      delay: 400,
+      margin: '20px',
+      duration: 1200,
       update: function (anim) {
         let progress = Math.round(anim.progress);
         if (progress === 100) {
@@ -45,11 +49,13 @@ let Header = () => {
   };
   const loadingAnim = () => {
     let animeDiv = document.getElementById("animation-div");
+    let imageElements = document.querySelectorAll(".header-anim-img");
     const imageSize = 3024;
     const gridSize = imageSize / 3;
     anime({
-      targets: animeDiv,
+      targets: [animeDiv, imageElements],
       opacity: 0,
+      delay:200,
       duration: 600,
       easing: "linear",
       update: function (anim) {
@@ -61,6 +67,14 @@ let Header = () => {
     });
   };
   const goTransition = (link) => {
+    let imageElements = document.querySelectorAll(".header-anim-img");
+
+    anime({
+      targets: imageElements,
+      opacity: 1,
+      margin: '2px'
+    });
+
     let location = window.location.pathname;
     if (link === location) {
       return false;
