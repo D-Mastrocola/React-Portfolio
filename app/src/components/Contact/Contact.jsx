@@ -1,4 +1,5 @@
 import {
+  Link,
   Button,
   Card,
   CardContent,
@@ -42,15 +43,22 @@ let Contact = () => {
             </Typography>
             <List>
               <ListItem>
+              <Link href="https://www.instagram.com/stoic.ginger/" target='_blank' underline="none">
                 <Button startIcon={<InstagramIcon />}>stoic.ginger</Button>
+                </Link>
               </ListItem>
+             
               <ListItem>
+              <Link  href="tel:330-236-6774" target='_blank' underline="none">
                 <Button startIcon={<LocalPhoneIcon />}>(330)-236-6774</Button>
+                </Link>
               </ListItem>
               <ListItem>
+              <Link  href="mailto:mastrodomcola@gmail.com" target='_blank' underline="none">
                 <Button startIcon={<EmailIcon />}>
                   mastrodomcola@gmail.com
                 </Button>
+                </Link>
               </ListItem>
             </List>
           </CardContent>

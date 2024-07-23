@@ -38,7 +38,7 @@ let Header = () => {
       easing: 'linear',
       delay: 400,
       margin: '20px',
-      duration: 1200,
+      duration: 800,
       update: function (anim) {
         let progress = Math.round(anim.progress);
         if (progress === 100) {
