@@ -25,6 +25,7 @@ let ProjectCard = (props) => {
                 <Button
                   className="project-btn"
                   variant="contained"
+                  size='small'
                   color="warning"
                   startIcon={<ComputerIcon />}
                   href={props.live}
@@ -34,6 +35,7 @@ let ProjectCard = (props) => {
                 <Button
                   className="project-btn"
                   variant="contained"
+                  size='small'
                   color="primary"
                   startIcon={<CodeIcon />}
                   href={props.code}
@@ -56,6 +58,7 @@ let ProjectCard = (props) => {
                 <Button
                   className="project-btn"
                   variant="contained"
+                  size='small'
                   color="warning"
                   startIcon={<ComputerIcon />}
                   href={props.live}
@@ -65,6 +68,7 @@ let ProjectCard = (props) => {
                 <Button
                   className="project-btn"
                   variant="contained"
+                  size='small'
                   color="primary"
                   startIcon={<CodeIcon />}
                   href={props.code}
