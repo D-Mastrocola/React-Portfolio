@@ -154,7 +154,7 @@ let Header = () => {
               <List>
                 <ListItemButton
                   component="a"
-                  onClick={() => goTransition("/about")}
+                  onClick={() => goTransition("/")}
                 >
                   <ListItemText primary="About" />
                 </ListItemButton>
