@@ -207,6 +207,10 @@ header ul li {
     box-sizing: border-box;
     text-align: left;
   }
+  .project-card {
+    height: 35vh;
+    padding: 1em 2em;
+  }
 }
 @media screen and (max-width: 700px) {
   #portfolio-pic {
@@ -218,7 +222,7 @@ header ul li {
 
   }
   .main-content{
-    padding: 0;
+    padding-top: 100px !important;
   }
   #about-text {
     width: 100vw;
@@ -228,5 +232,21 @@ header ul li {
     text-align: center;
     align-items: center;
 
+  }
+  .project-card {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+  }
+  .project-card div {
+    text-align: center !important;
+  }
+  .project-card img {
+    width: 100vw;
+    height: auto !important;
+  }
+  .project-right {
+  flex-direction: column-reverse;
   }
 }
