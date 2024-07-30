@@ -215,6 +215,13 @@ header ul li {
   #contact {
     font-size: .9em !important;
   }
+  #contact-card {
+    flex-direction: column;
+  }
+  #contact-card-img {
+    height: 350px;
+    width: auto;
+  }
 }
 @media screen and (max-width: 700px) {
   #portfolio-pic {

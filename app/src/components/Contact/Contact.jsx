@@ -18,9 +18,9 @@ let Contact = () => {
     <>
       <Header />
       <main className="main-content" id="contact">
-        <Card sx={{ display: "flex" }}>
+        <Card sx={{ display: "flex" }} id='contact-card'>
           <CardMedia
-            
+            id='contact-card-img'
             sx={{ width:  '20vw'}}
             image="/assets/images/portfolioPicture.jpg"
             title="dominic mastrocola"
