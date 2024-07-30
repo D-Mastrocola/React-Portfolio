@@ -1,5 +1,4 @@
 import {
-  Link,
   Button,
   Card,
   CardContent,
@@ -19,9 +18,10 @@ let Contact = () => {
     <>
       <Header />
       <main className="main-content" id="contact">
-        <Card sx={{ display: "flex" }}>
+        <Card sx={{ display: "flex" }} id='contact-card'>
           <CardMedia
-            sx={{ width: 360 }}
+            id='contact-card-img'
+            sx={{ width:  '20vw'}}
             image="/assets/images/portfolioPicture.jpg"
             title="dominic mastrocola"
           />
@@ -43,22 +43,15 @@ let Contact = () => {
             </Typography>
             <List>
               <ListItem>
-              <Link href="https://www.instagram.com/stoic.ginger/" target='_blank' underline="none">
                 <Button startIcon={<InstagramIcon />}>stoic.ginger</Button>
-                </Link>
               </ListItem>
-             
               <ListItem>
-              <Link  href="tel:330-236-6774" target='_blank' underline="none">
                 <Button startIcon={<LocalPhoneIcon />}>(330)-236-6774</Button>
-                </Link>
               </ListItem>
               <ListItem>
-              <Link  href="mailto:mastrodomcola@gmail.com" target='_blank' underline="none">
                 <Button startIcon={<EmailIcon />}>
                   mastrodomcola@gmail.com
                 </Button>
-                </Link>
               </ListItem>
             </List>
           </CardContent>
