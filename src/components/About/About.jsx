@@ -2,7 +2,7 @@ import { Typography, Divider, Button, Stack } from "@mui/material";
 import AttachFileIcon from "@mui/icons-material/AttachFile";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import Header from "../Header/Header";
-
+import pfp from './pfp01.jpeg';
 let About = () => {
   return (
     <>
@@ -41,7 +41,7 @@ let About = () => {
         </div>
         <img
           id="portfolio-pic"
-          src="./assets/images/pfp01.jpeg"
+          src={pfp}
           alt="portfolio-pic"
         />
       </main>
