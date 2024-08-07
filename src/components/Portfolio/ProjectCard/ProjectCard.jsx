@@ -1,4 +1,4 @@
-import { Typography, Button} from "@mui/material";
+import { Typography, Button, Link } from "@mui/material";
 import CodeIcon from "@mui/icons-material/Code";
 import ComputerIcon from "@mui/icons-material/Computer";
 import Divider from "@mui/material/Divider";
@@ -25,22 +25,34 @@ let ProjectCard = (props) => {
                 <Button
                   className="project-btn"
                   variant="contained"
-                  size='small'
+                  size="small"
                   color="warning"
                   startIcon={<ComputerIcon />}
-                  href={props.live}
                 >
-                  Live
+                  <Link
+                    href={props.live}
+                    underline="none"
+                    target="_blank"
+                    className="portfolio-links"
+                  >
+                    Live
+                  </Link>
                 </Button>
                 <Button
                   className="project-btn"
                   variant="contained"
-                  size='small'
+                  size="small"
                   color="primary"
                   startIcon={<CodeIcon />}
-                  href={props.code}
                 >
-                  Code
+                  <Link
+                    href={props.code}
+                    underline="none"
+                    target="_blank"
+                    className="portfolio-links"
+                  >
+                    Code
+                  </Link>
                 </Button>
               </div>
             </div>
@@ -58,22 +70,34 @@ let ProjectCard = (props) => {
                 <Button
                   className="project-btn"
                   variant="contained"
-                  size='small'
+                  size="small"
                   color="warning"
                   startIcon={<ComputerIcon />}
-                  href={props.live}
                 >
-                  Live
+                  <Link
+                    href={props.live}
+                    underline="none"
+                    target="_blank"
+                    className="portfolio-links"
+                  >
+                    Live
+                  </Link>
                 </Button>
                 <Button
                   className="project-btn"
                   variant="contained"
-                  size='small'
+                  size="small"
                   color="primary"
                   startIcon={<CodeIcon />}
-                  href={props.code}
                 >
-                  Code
+                  <Link
+                    href={props.code}
+                    underline="none"
+                    target="_blank"
+                    className="portfolio-links"
+                  >
+                    Code
+                  </Link>
                 </Button>
               </div>
             </div>

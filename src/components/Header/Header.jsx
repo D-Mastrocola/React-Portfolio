@@ -5,6 +5,7 @@ import {
   Button,
   Box,
   List,
+  Link,
   ListItem,
   ListItemButton,
   ListItemText,
@@ -34,10 +35,10 @@ let Header = () => {
     let imageElements = document.querySelectorAll(".header-anim-img");
     anime({
       targets: imageElements,
-      rotate: '2turn',
-      easing: 'linear',
+      rotate: "2turn",
+      easing: "linear",
       delay: 400,
-      margin: '20px',
+      margin: "20px",
       duration: 800,
       update: function (anim) {
         let progress = Math.round(anim.progress);
@@ -55,7 +56,7 @@ let Header = () => {
     anime({
       targets: [animeDiv, imageElements],
       opacity: 0,
-      delay:200,
+      delay: 200,
       duration: 600,
       easing: "linear",
       update: function (anim) {
@@ -72,7 +73,7 @@ let Header = () => {
     anime({
       targets: imageElements,
       opacity: 1,
-      margin: '2px'
+      margin: "2px",
     });
 
     let location = window.location.pathname;
@@ -152,10 +153,7 @@ let Header = () => {
               onClick={toggleDrawer(false)}
             >
               <List>
-                <ListItemButton
-                  component="a"
-                  onClick={() => goTransition("/")}
-                >
+                <ListItemButton component="a" onClick={() => goTransition("/")}>
                   <ListItemText primary="About" />
                 </ListItemButton>
                 <ListItemButton
@@ -170,8 +168,13 @@ let Header = () => {
                 >
                   <ListItemText primary="Contact" />
                 </ListItemButton>
-                <ListItemButton component="a" href="./resume">
-                  <ListItemText primary="Resume" />
+                <ListItemButton>
+                  <Link
+                    href="https://docs.google.com/document/d/1N5bozh_b9TkdDWw3qjZfWmAaUyDPKeXE/edit?usp=sharing&ouid=117280491140216913901&rtpof=true&sd=true"
+                    target="_blank"
+                  >
+                    Resume
+                  </Link>
                 </ListItemButton>
               </List>
             </Box>

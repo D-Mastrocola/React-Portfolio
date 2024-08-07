@@ -163,6 +163,9 @@ header ul li {
 .project-left {
   text-align: left;
 }
+.portfolio-links {
+  color: #fff !important;
+}
 #first-project {
   flex-direction: column;
   justify-content: center;
