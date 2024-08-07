@@ -1,9 +1,71 @@
-import { Typography, Divider, Button, Stack } from "@mui/material";
+import { Typography, Divider, Button, Stack, Link } from "@mui/material";
 import AttachFileIcon from "@mui/icons-material/AttachFile";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import Header from "../Header/Header";
+
+import anime from "animejs";
+import { useNavigate } from "react-router-dom";
+
+
 import pfp from './pfp01.jpeg';
+
 let About = () => {
+  const navigate = useNavigate();
+
+  const changeLocation = (link) => {
+    navigate(link);
+  };
+
+  const goTransition = (link) => {
+    let imageElements = document.querySelectorAll(".header-anim-img");
+
+    anime({
+      targets: imageElements,
+      opacity: 1,
+      margin: "2px",
+    });
+
+    let location = window.location.pathname;
+    if (link === location) {
+      return false;
+    }
+    let animeDiv = document.getElementById("animation-div");
+
+    let random = Math.floor(Math.random() * 2);
+    animeDiv.style.zIndex = 100;
+    if (random == 0) {
+      animeDiv.style.opacity = 0;
+
+      anime({
+        targets: animeDiv,
+        opacity: 1,
+        easing: "linear",
+        duration: 800,
+        update: function (anim) {
+          let progress = Math.round(anim.progress);
+          if (progress === 100) {
+            changeLocation(link);
+          }
+        },
+      });
+    } else if (random == 1) {
+      animeDiv.style.width = "100vw";
+      animeDiv.style.height = "0vh";
+      animeDiv.style.opacity = 1;
+      anime({
+        targets: animeDiv,
+        height: "100vh",
+        easing: "easeInOutElastic",
+        duration: 600,
+        update: function (anim) {
+          let progress = Math.round(anim.progress);
+          if (progress === 100) {
+            changeLocation(link);
+          }
+        },
+      });
+    }
+  };
   return (
     <>
       <Header />
@@ -23,7 +85,7 @@ let About = () => {
           </Typography>
           <Stack direction="row" spacing={2}>
             <Button
-              href="./portfolio"
+              onClick={() => goTransition("/portfolio")}
               variant="contained"
               color="warning"
               startIcon={<ChevronRightIcon />}
@@ -31,11 +93,15 @@ let About = () => {
               View Work
             </Button>
             <Button
+              component='a'
               href="https://docs.google.com/document/d/1N5bozh_b9TkdDWw3qjZfWmAaUyDPKeXE/edit?usp=sharing&ouid=117280491140216913901&rtpof=true&sd=true"
               variant="text"
               startIcon={<AttachFileIcon />}
             >
-              Resume
+              <Link underline="none" href="https://docs.google.com/document/d/1N5bozh_b9TkdDWw3qjZfWmAaUyDPKeXE/edit?usp=sharing&ouid=117280491140216913901&rtpof=true&sd=true" target="_blank">
+                Resume
+              </Link>
+              
             </Button>
           </Stack>
         </div>
