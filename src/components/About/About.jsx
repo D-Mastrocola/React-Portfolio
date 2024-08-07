@@ -6,6 +6,9 @@ import Header from "../Header/Header";
 import anime from "animejs";
 import { useNavigate } from "react-router-dom";
 
+
+import pfp from './pfp01.jpeg';
+
 let About = () => {
   const navigate = useNavigate();
 
@@ -104,7 +107,7 @@ let About = () => {
         </div>
         <img
           id="portfolio-pic"
-          src="./assets/images/pfp01.jpeg"
+          src={pfp}
           alt="portfolio-pic"
         />
       </main>
